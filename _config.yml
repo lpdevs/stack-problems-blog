@@ -1,8 +1,8 @@
 title: Stack Problems
 description: My Personal Stack Problems
-author: Agus Makmun
-github: https://github.com/agusmakmun
-about: I am freelance developer. Currently doing more in backend, focused in Python and Django.
+author: Pham Van Lam
+github: https://github.com/phamvanlam
+about: I am a software programmer. I am advanced in C/C++; intermediate in java (android), javascript, html, css and beginner in nodejs. 
 disqus_shortname: stackproblems
 google_analytics: UA-XXXXXXXX-Y
 avatar_url: /static/img/avatar.jpg
@@ -17,15 +17,15 @@ collections:
 
 social:
     - icon: fa-facebook
-      link: "#"
+      link: "https://www.facebook.com/wpphamvanlamcom"
     - icon: fa-twitter
-      link: "https://twitter.com/agusmakmun6"
+      link: "https://twitter.com/phamvanlam_com"
     - icon: fa-linkedin
-      link: "https://www.linkedin.com/in/summonagus"
-    - icon: fa-stack-exchange
       link: "#"
+    - icon: fa-stack-exchange
+      link: "http://stackoverflow.com/users/5829049/lampv"
     - icon: fa-github
-      link: "https://github.com/agusmakmun"
+      link: "https://github.com/phamvanlam"
 
 share:
   twitter_username: agusmakmun6
