@@ -18,12 +18,14 @@ collections:
 social:
     - icon: fa-github
       link: "https://github.com/phamvanlam"
+    - icon: fa-stack-overflow
+      link: "http://stackoverflow.com/users/5829049/lampv"
+    - icon: fa-wordpress
+      link: "http://phamvanlam.com/"  
     - icon: fa-facebook
       link: "https://www.facebook.com/wpphamvanlamcom"
     - icon: fa-twitter
       link: "https://twitter.com/phamvanlam_com"
-    - icon: fa-stack-overflow
-      link: "http://stackoverflow.com/users/5829049/lampv"
 
 share:
   twitter_username: agusmakmun6
