@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-I am freelance developer. Currently doing more in backend, focused in Python and Django.
+I am a software programmer. I am advanced in C/C++; intermediate in java (android), javascript, html, css and beginner in nodejs
 
-email: agus[at]python.web.id
+email: lampv606@gmail.com
