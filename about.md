@@ -4,6 +4,11 @@ title: About
 permalink: /about/
 ---
 
-I am a software programmer. I am advanced in C/C++; intermediate in java (android), javascript, html, css and beginner in nodejs
+I am a software programmer. I am advanced in C/C++; intermediate in java (android), javascript, html, css and beginner in nodejs. This website is to share all my experiences about programming.
 
-email: lampv606@gmail.com
+If you have some questions, please feel free to ask me:
+Email: lampv606@gmail.com
+
+This respository is forked from <a href="https://github.com/agusmakmun/agusmakmun.github.io">https://github.com/agusmakmun/agusmakmun.github.io</a>. 
+
+
