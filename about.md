@@ -8,7 +8,7 @@ I am a software programmer. I am advanced in C/C++; intermediate in java (androi
 
 If you have some questions, please feel free to ask me:
 
-Email: lampv606@gmail.com
+ * Email: lampv606@gmail.com
 
 This respository is forked from [https://github.com/agusmakmun/agusmakmun.github.io](https://github.com/agusmakmun/agusmakmun.github.io).
 
