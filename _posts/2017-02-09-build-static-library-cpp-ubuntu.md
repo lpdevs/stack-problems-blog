@@ -17,80 +17,80 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 ### Structure of project
 
 + test
-   + main.cc
-   + Makefile
- * lib.h
- * lib.cc
- * Makefile
+ - main.cc
+ - Makefile
++ lib.h
++ lib.cc
++ Makefile
  
 ### Detail
  
- * lib.h
++ lib.h
    
-   ```cpp
-   #ifndef _LIB_H_
-   #define _LIB_H_
-   	void sayHi();
-   #endif
-   ```
+```cpp
+#ifndef _LIB_H_
+#define _LIB_H_
+	void sayHi();
+#endif
+```
    
- * lib.cc
++ lib.cc
  
-   ```cpp
-   #include "lib.h"
-   #include <stdio.h>
-   void sayHi()
-   {
-   	printf("Hello from static library\n");
-   }
-   ```
+```cpp
+#include "lib.h"
+#include <stdio.h>
+void sayHi()
+{
+	printf("Hello from static library\n");
+}
+```
  
- * Makefile
++ Makefile
  
-   ```make
-   CC = g++
-   libmylib.a: lib.o
-   	ar rcs $@ $^
-   lib.o: lib.cc lib.h
-   	$(CC) -c -o $@ $<
-   clean:
-   	rm -f *.o *.a
-   ```
- 
-   * Compiler: g++
-   * Output: libmylib.a
-   * $@: means target
-   * $^: all dependencies
-   * $<: first dependency
-   * "ar rcs ..." is to build static library.
-   
- * test/main.cc
- 
-   ```cpp
-   #include "../lib.h"
-   #include <stdio.h>
-   int main()
-   {
-   	sayHi();
-	return 0;
-   }
-   ```
-   
-* test/Makefile
+```make
+CC = g++
+libmylib.a: lib.o
+	ar rcs $@ $^
+lib.o: lib.cc lib.h
+	$(CC) -c -o $@ $<
+clean:
+	rm -f *.o *.a
+```
 
-   ```make
-   TARGET = prog
-   CC = g++
-   LDFLAGS = -L..
-   LIBS = -static -lmylib
-   $(TARGET): main.o 
-   	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
-   main.o: main.cc 
-   	$(CC) -c $^ -o $@ 
-   clean: rm -f *.o $(TARGET)
-   ```
-   * LDFLAGS: directory of library (libmylib.a) with option -L
-   * LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
+ - Compiler: g++
+ - Output: libmylib.a
+ - $@: means target
+ - $^: all dependencies
+ - $<: first dependency
+ - "ar rcs ..." is to build static library.
+   
++ test/main.cc
+ 
+```cpp
+#include "../lib.h"
+#include <stdio.h>
+int main()
+{
+	sayHi();
+	return 0;
+}
+```
+   
++ test/Makefile
+
+```make
+TARGET = prog
+CC = g++
+LDFLAGS = -L..
+LIBS = -static -lmylib
+$(TARGET): main.o 
+	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
+main.o: main.cc 
+	$(CC) -c $^ -o $@ 
+clean: rm -f *.o $(TARGET)
+```
+ - LDFLAGS: directory of library (libmylib.a) with option -L
+ - LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
 
 ### Building static library
 
