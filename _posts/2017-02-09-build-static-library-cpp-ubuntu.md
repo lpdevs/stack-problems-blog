@@ -57,12 +57,12 @@ clean:
 	rm -f *.o *.a
 ```
 
-  - Compiler: g++
-  - Output: libmylib.a
-  - $@: means target
-  - $^: all dependencies
-  - $<: first dependency
-  - "ar rcs ..." is to build static library.
+    - Compiler: g++
+    - Output: libmylib.a
+    - $@: means target
+    - $^: all dependencies
+    - $<: first dependency
+    - "ar rcs ..." is to build static library.
    
 + **test/main.cc**
  
@@ -89,8 +89,8 @@ main.o: main.cc
 	$(CC) -c $^ -o $@ 
 clean: rm -f *.o $(TARGET)
 ```
-  - LDFLAGS: directory of library (libmylib.a) with option -L
-  - LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
+    - LDFLAGS: directory of library (libmylib.a) with option -L
+    - LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
 
 ### Building static library
 
