@@ -21,7 +21,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
  * lib.cc
  * Makefile
  
-### Explanation
+### Detail
  * lib.h
  
  ```
@@ -76,19 +76,21 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
  
 * test/Makefile
 
-```
+ ```
  TARGET = prog
- CC = g++
- LDFLAGS = -L..
- LIBS = -static -lmylib
+CC = g++
+LDFLAGS = -L..
+LIBS = -static -lmylib
 
- $(TARGET): main.o
-	 $(CC) $^ $(LDFLAGS) $(LIBS) -o $@
- main.o: main.cc
-	 $(CC) -c $^ -o $@
- clean:
-	 rm -f *.o $(TARGET)
-```
+$(TARGET): main.o
+	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
+main.o: main.cc
+	$(CC) -c $^ -o $@
+clean:
+	rm -f *.o $(TARGET)
+
+
+ ```
 
  * LDFLAGS: directory of library (libmylib.a) with option -L
  * LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
