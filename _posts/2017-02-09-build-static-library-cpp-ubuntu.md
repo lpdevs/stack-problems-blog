@@ -17,8 +17,8 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 ### Structure of project
 
 + test
-  - main.cc
-  - Makefile
+    - main.cc
+    - Makefile
 + lib.h
 + lib.cc
 + Makefile
@@ -89,6 +89,7 @@ main.o: main.cc
 	$(CC) -c $^ -o $@ 
 clean: rm -f *.o $(TARGET)
 ```
+
     - LDFLAGS: directory of library (libmylib.a) with option -L
     - LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
 
