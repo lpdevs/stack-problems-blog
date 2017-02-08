@@ -63,20 +63,19 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
    * $^: all dependencies
    * $<: first dependency
    * "ar rcs ..." is to build static library.
-  
+   
  * test/main.cc
  
    ```cpp
    #include "../lib.h"
    #include <stdio.h>
-
    int main()
    {
-	 sayHi();
-	 return 0;
+   	sayHi();
+	return 0;
    }
    ```
- 
+   
 * test/Makefile
 
    ```make
@@ -84,15 +83,14 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
    CC = g++
    LDFLAGS = -L..
    LIBS = -static -lmylib
-
    $(TARGET): main.o
    	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
    main.o: main.cc
-   	$(CC) -c $^ -o $@
+	$(CC) -c $^ -o $@
    clean:
-   	rm -f *.o $(TARGET)
+	rm -f *.o $(TARGET)
    ```
-
+   
    * LDFLAGS: directory of library (libmylib.a) with option -L
    * LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
 
