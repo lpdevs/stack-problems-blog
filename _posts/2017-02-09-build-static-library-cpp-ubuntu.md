@@ -17,8 +17,8 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 ### Structure of project:
 
  * test
-  * main.cc
-  * Makefile
+  + main.cc
+  + Makefile
  * lib.h
  * lib.cc
  * Makefile
@@ -27,27 +27,27 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
  
  * lib.h
  
- ````
+ ```cpp
   #ifndef _LIB_H_
   #define _LIB_H_
   	void sayHi();
   #endif
- ````
+ ```
  
  * lib.cc
  
- ````
+ ```cpp
  #include "lib.h"
  #include <stdio.h>
 
  void sayHi(){
 	 printf("Hello from static library\n");
  }
- ````
+ ```
  
  * Makefile
  
- ````
+ ```make
  CC = g++
  libmylib.a: lib.o
  	ar rcs $@ $^
@@ -55,7 +55,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 	$(CC) -c -o $@ $<
  clean:
 	rm -f *.o *.a
- ````
+ ```
  
   * Compiler: g++
   * Output: libmylib.a
@@ -66,7 +66,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
   
  * test/main.cc
  
- ````
+ ```cpp
  #include "../lib.h"
  #include <stdio.h>
 
@@ -75,11 +75,11 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 	 sayHi();
 	 return 0;
  }
- ````
+ ```
  
 * test/Makefile
 
- ````
+ ```make
  TARGET = prog
  CC = g++
  LDFLAGS = -L..
@@ -91,7 +91,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 	$(CC) -c $^ -o $@
  clean:
 	rm -f *.o $(TARGET)
- ````
+ ```
 
  * LDFLAGS: directory of library (libmylib.a) with option -L
  * LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
@@ -100,17 +100,17 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 
 Assuming that you are in **/build-static-library-cpp-ubuntu** directory.
 
-````
+```
 make
-````
+```
 
 ### Testing static library
 
-````
+```
 cd test
 make
 ./prog
-````
+```
 
 - result should be: Hello from static library
 
