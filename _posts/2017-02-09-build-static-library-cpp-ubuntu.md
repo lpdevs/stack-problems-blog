@@ -111,4 +111,5 @@ make
 - result should be: Hello from static library
 
  
-Thanks for reading. If you have some questions, feel free to ask me.
+Thanks for reading. If you have some questions, feel free to ask me. 
+
