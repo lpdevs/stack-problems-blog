@@ -39,10 +39,9 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
    ```cpp
    #include "lib.h"
    #include <stdio.h>
-
    void sayHi()
    {
-	 printf("Hello from static library\n");
+   	printf("Hello from static library\n");
    }
    ```
  
