@@ -51,11 +51,11 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
    ```make
    CC = g++
    libmylib.a: lib.o
- 	ar rcs $@ $^
+   	ar rcs $@ $^
    lib.o: lib.cc lib.h
-	$(CC) -c -o $@ $<
+   	$(CC) -c -o $@ $<
    clean:
-	rm -f *.o *.a
+   	rm -f *.o *.a
    ```
  
    * Compiler: g++
@@ -87,11 +87,11 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
    LIBS = -static -lmylib
 
    $(TARGET): main.o
-	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
+   	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
    main.o: main.cc
-	$(CC) -c $^ -o $@
+   	$(CC) -c $^ -o $@
    clean:
-	rm -f *.o $(TARGET)
+   	rm -f *.o $(TARGET)
    ```
 
    * LDFLAGS: directory of library (libmylib.a) with option -L
