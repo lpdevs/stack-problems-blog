@@ -17,8 +17,8 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 ### Structure of project
 
 + test
- - main.cc
- - Makefile
+  - main.cc
+  - Makefile
 + lib.h
 + lib.cc
 + Makefile
@@ -57,12 +57,12 @@ clean:
 	rm -f *.o *.a
 ```
 
- - Compiler: g++
- - Output: libmylib.a
- - $@: means target
- - $^: all dependencies
- - $<: first dependency
- - "ar rcs ..." is to build static library.
+  - Compiler: g++
+  - Output: libmylib.a
+  - $@: means target
+  - $^: all dependencies
+  - $<: first dependency
+  - "ar rcs ..." is to build static library.
    
 + test/main.cc
  
@@ -108,8 +108,6 @@ make
 ./prog
 ```
 
-- result should be: Hello from static library
+  - result should be: Hello from static library
 
- 
 Thanks for reading. If you have some questions, feel free to ask me. 
-
