@@ -25,7 +25,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
  
 ### Detail
  
-+ lib.h
++ **lib.h**
    
 ```cpp
 #ifndef _LIB_H_
@@ -34,7 +34,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 #endif
 ```
    
-+ lib.cc
++ **lib.cc**
  
 ```cpp
 #include "lib.h"
@@ -45,7 +45,7 @@ void sayHi()
 }
 ```
  
-+ Makefile
++ **Makefile**
  
 ```make
 CC = g++
@@ -64,7 +64,7 @@ clean:
   - $<: first dependency
   - "ar rcs ..." is to build static library.
    
-+ test/main.cc
++ **test/main.cc**
  
 ```cpp
 #include "../lib.h"
@@ -76,7 +76,7 @@ int main()
 }
 ```
    
-+ test/Makefile
++ **test/Makefile**
 
 ```make
 TARGET = prog
@@ -89,8 +89,8 @@ main.o: main.cc
 	$(CC) -c $^ -o $@ 
 clean: rm -f *.o $(TARGET)
 ```
- - LDFLAGS: directory of library (libmylib.a) with option -L
- - LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
+  - LDFLAGS: directory of library (libmylib.a) with option -L
+  - LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
 
 ### Building static library
 
