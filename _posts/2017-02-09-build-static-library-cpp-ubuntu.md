@@ -6,6 +6,7 @@ categories: [static library, cpp, ubuntu]
 ---
 
 Library is very important when you build some kind of big systems. Some advantages of library are:
+
  * You have to write less code
  * Easy to fix code
  * Easy to share to others
@@ -78,18 +79,16 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 
  ```
  TARGET = prog
-CC = g++
-LDFLAGS = -L..
-LIBS = -static -lmylib
+ CC = g++
+ LDFLAGS = -L..
+ LIBS = -static -lmylib
 
-$(TARGET): main.o
+ $(TARGET): main.o
 	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
-main.o: main.cc
+ main.o: main.cc
 	$(CC) -c $^ -o $@
-clean:
+ clean:
 	rm -f *.o $(TARGET)
-
-
  ```
 
  * LDFLAGS: directory of library (libmylib.a) with option -L
@@ -112,6 +111,7 @@ make
 ````
 
 - result should be: Hello from static library
+
  
 Thanks for reading. If you have some questions, feel free to ask me.
   
