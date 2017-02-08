@@ -76,7 +76,7 @@ int main()
 }
 ```
    
-+ test/Makefile1
++ test/Makefile
 
 ```make
 TARGET = prog
