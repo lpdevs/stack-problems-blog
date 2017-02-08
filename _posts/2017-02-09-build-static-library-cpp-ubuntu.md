@@ -30,7 +30,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
    ```cpp
    #ifndef _LIB_H_
    #define _LIB_H_
-  	void sayHi();
+   	void sayHi();
    #endif
    ```
    
