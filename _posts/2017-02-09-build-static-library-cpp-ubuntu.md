@@ -14,11 +14,11 @@ Library is very important when you build some kind of big systems. Some advantag
  
 In this post, I am going to share one way to build static library in Ubuntu. First of all, you can get source files on [Github](https://github.com/phamvanlam/stack-problems/tree/master/build-static-library-cpp-ubuntu).
 
-### Structure of project:
+### Structure of project
 
  * test
-  + main.cc
-  + Makefile
+   + main.cc
+   + Makefile
  * lib.h
  * lib.cc
  * Makefile
