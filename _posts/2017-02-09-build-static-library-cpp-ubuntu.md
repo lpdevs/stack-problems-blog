@@ -7,16 +7,16 @@ categories: [static-library, cpp, ubuntu]
 
 Library is very important when you build some kind of big systems. Some advantages of library are:
 
- * You have to write less code
- * Easy to fix code
- * Easy to share to others
- * ...
++ You have to write less code
++ Easy to fix code
++ Easy to share to others
++ ...
  
 In this post, I am going to share one way to build static library in Ubuntu. First of all, you can get source files on [Github](https://github.com/phamvanlam/stack-problems/tree/master/build-static-library-cpp-ubuntu).
 
 ### Structure of project
 
- * test
++ test
    + main.cc
    + Makefile
  * lib.h
