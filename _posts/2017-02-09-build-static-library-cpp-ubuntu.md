@@ -12,7 +12,7 @@ Library is very important when you build some kind of big systems. Some advantag
  * Easy to share to others
  * ...
  
-In this post, I am going to share one way to build static library in Ubuntu. First of all, you can get source files on [Github](https://github.com/phamvanlam/stack-problems/tree/master/build-static-library-cpp-ubuntu)
+In this post, I am going to share one way to build static library in Ubuntu. First of all, you can get source files on [Github](https://github.com/phamvanlam/stack-problems/tree/master/build-static-library-cpp-ubuntu).
 
 ### Structure of project:
  * test
@@ -28,7 +28,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
  ````
  #ifndef _LIB_H_
  #define _LIB_H_
-		void sayHi();
+	void sayHi();
  #endif
  ````
  
@@ -48,11 +48,11 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
  ````
  CC = g++
  libmylib.a: lib.o
-	 ar rcs $@ $^
+ 	ar rcs $@ $^
  lib.o: lib.cc lib.h
-	 $(CC) -c -o $@ $<
+	$(CC) -c -o $@ $<
  clean:
-	 rm -f *.o *.a
+	rm -f *.o *.a
  ````
  
   * Compiler: g++
@@ -73,11 +73,11 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 	 sayHi();
 	 return 0;
  }
- ```
+ ````
  
 * test/Makefile
 
- ```
+ ````
  TARGET = prog
  CC = g++
  LDFLAGS = -L..
@@ -89,7 +89,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
 	$(CC) -c $^ -o $@
  clean:
 	rm -f *.o $(TARGET)
- ```
+ ````
 
  * LDFLAGS: directory of library (libmylib.a) with option -L
  * LIBS: name of library (mylib) with option -l (without prefix "lib" and suffix ".a")
