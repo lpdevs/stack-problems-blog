@@ -30,7 +30,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
     ```cpp
     #ifndef _LIB_H_
     #define _LIB_H_
-	void sayHi();
+      void sayHi();
     #endif
     ```
    
@@ -41,7 +41,7 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
     #include <stdio.h>
     void sayHi()
     {
-	printf("Hello from static library\n");
+      printf("Hello from static library\n");
     }
     ```
  
@@ -50,11 +50,11 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
     ```make
     CC = g++
     libmylib.a: lib.o
-	ar rcs $@ $^
+        ar rcs $@ $^
     lib.o: lib.cc lib.h
-	$(CC) -c -o $@ $<
+        $(CC) -c -o $@ $<
     clean:
-	rm -f *.o *.a
+        rm -f *.o *.a
     ```
 
     * Compiler: g++
@@ -71,8 +71,8 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
     #include <stdio.h>
     int main()
     {
-	sayHi();
-	return 0;
+      sayHi();
+      return 0;
     }
     ```
    
@@ -84,9 +84,9 @@ In this post, I am going to share one way to build static library in Ubuntu. Fir
     LDFLAGS = -L..
     LIBS = -static -lmylib
     $(TARGET): main.o 
-	$(CC) $^ $(LDFLAGS) $(LIBS) -o $@
+      $(CC) $^ $(LDFLAGS) $(LIBS) -o $@
     main.o: main.cc 
-	$(CC) -c $^ -o $@ 
+      $(CC) -c $^ -o $@ 
     clean: rm -f *.o $(TARGET)
     ```
 
