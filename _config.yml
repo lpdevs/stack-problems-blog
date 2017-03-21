@@ -1,7 +1,7 @@
 title: Stack Problems
 description: My Personal Stack Problems
-author: Pham Van Lam
-github: https://github.com/phamvanlam
+author: LP Devs
+github: https://github.com/lpdevs
 about: I am a software programmer. I am advanced in C/C++; intermediate in java (android), javascript, html, css and beginner in nodejs. 
 disqus_shortname: phamvanlam
 google_analytics: UA-XXXXXXXX-Y
@@ -17,7 +17,7 @@ collections:
 
 social:
     - icon: fa-github
-      link: "https://github.com/phamvanlam"
+      link: "https://github.com/lpdevs"
     - icon: fa-stack-overflow
       link: "http://stackoverflow.com/users/5829049/lampv"
     - icon: fa-wordpress
@@ -39,7 +39,7 @@ urls:
     - text: XML Feed
       url: /feed.xml
 
-url: "https://phamvanlam.github.io"
+url: "https://lpdevs.github.io"
 baseurl: ""
 paginate: 20
 per_page: 20
