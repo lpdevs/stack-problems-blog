@@ -14,7 +14,7 @@ This respository is forked from [https://github.com/agusmakmun/agusmakmun.github
 
 Visit me:
 
- * [Github](https://github.com/phamvanlam)
+ * [Github](https://github.com/lpdevs)
 
  * [Stackoverflow](http://stackoverflow.com/users/5829049/lampv)
 
