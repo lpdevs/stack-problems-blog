@@ -58,11 +58,10 @@ By now, I am assumming that you have installed Nodejs. Let's start now:
     ```
     
     * That means when you navigate to the [http://localhost:8080](http://localhost:8080), you requested to get '/'. Then the server
-      response by sending **Hello from main page** to your browser. So starting the server again, then navigate to [http://localhost:8080](http://localhost:8080).
+      responses by sending **Hello from main page** to your browser. So starting the server again, then navigate to [http://localhost:8080](http://localhost:8080).
       You will receive that message.
     
-    * For now, you just can access the server from your computer. Because the server is bound to **localhost**. If you want to access
-    the server from other computers in the same network. You must bind it with your **ip address**. So **index.js** must be modified like below:
+    * For now, you just can access the server from your computer. Because the server is bound with **localhost**. If you want to access the server from other computers in the same network. You must bind it with your **ip address**. So **index.js** must be modified like below:
     
       ``` 
       var express = require('express');
@@ -82,8 +81,7 @@ By now, I am assumming that you have installed Nodejs. Let's start now:
       
       Start the server again, then navigate to [http://<your_ip>:8080. 
       
- OK, it is just simple way to create a server on Ubuntu using Nodejs and Expressjs. If you want to create more complicated server or have some questions,
- feel free to ask me. I am really happy to help you.
+ OK, it is just simple way to create a server on Ubuntu using Nodejs and Expressjs. If you want to create more complicated server or have some questions, feel free to ask me. I am really happy to help you.
  
  LP Devs.
   
